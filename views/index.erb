@@ -1,0 +1,12 @@
+<h2>Albums</h2>
+
+<div>
+<% @albums.each do |album| %>
+<p style="color:red"> <%= album.artist.format_name %></p>
+<p>Title: <%= album.album_title %></p>
+<p>Year of issue: <%= album.year_of_issue.to_s %></p>
+<p>Quantity: <%= album.quantity.to_s %></p>
+
+<br>
+<% end %>
+</div>

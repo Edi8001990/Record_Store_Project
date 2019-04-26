@@ -9,6 +9,13 @@ class Artist
     @surname = options['surname']
   end
 
+
+
+
+
+
+
+
 def save()
   sql = "INSERT INTO artists (name, surname)
         VALUES ($1, $2) RETURNING id;"
@@ -18,5 +25,29 @@ def save()
   id = result.first["id"]
   @id = id.to_i
 end
+
+
+def self.find(id)
+  sql = "SELECT * FROM artists WHERE id = $1;"
+  values = [id]
+  result = SqlRunner.run(sql, values).first
+  artist = Artist.new(result)
+  return artist
+end
+
+
+
+
+
+def format_name
+  return "#{@name} #{@surname}"
+end
+
+
+
+# def self.delete_all()
+#   sql = "DELETE FROM artists;"
+#   SqlRunner.run(sql)
+# end
 
 end
