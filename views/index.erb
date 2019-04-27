@@ -1,7 +1,7 @@
 <h2>Albums</h2>
 
 <div>
-<% Album.all().each do |album| %>
+<% @all_albums.each do |album| %>
 <p><%= album.artist.name %></p>
 <p>Title: <%= album.album_title %></p>
 <p>Year of issue: <%= album.year_of_issue.to_s %></p>

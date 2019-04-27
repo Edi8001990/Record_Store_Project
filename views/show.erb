@@ -3,6 +3,7 @@
 <p>Title: <%= @album.album_title %></p>
 <p>Year of issue: <%= @album.year_of_issue.to_s %></p>
 <p>Quantity: <%= @album.quantity.to_s %></p>
+<a href="/albums/<%= @album.id %>/edit">Edit</a>
 <form class="" action="/albums/<%= @album.id %>/delete" method="POST">
 <input type="submit" value="Remove Album">
 </form>

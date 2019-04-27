@@ -1,0 +1,30 @@
+<p>Edit <b><%= @album.album_title %></b> album from <span style="color:red;"><%= @album.artist.name %></span> </p>
+
+<form method="POST" action="/albums/<%= @album.id %>">
+  <div class="form-wrapper">
+
+      <div class="form-el">
+        <label for="album_title">Album Title: </label>
+        <input type="text" name="album_title" id="album_title" value="<%= @album.album_title %>"/>
+      </div>
+
+    <div class="form-el">
+        <label for="year_of_issue">Year of issue: </label>
+        <input type="number" name="year_of_issue" id="year_of_issue" value="<%= @album.year_of_issue %>"/>
+    </div>
+
+    <div class="form-el">
+        <label for="quantity">Quantity: </label>
+        <input type="number" name="quantity" id="quantity" value="<%= @album.quantity %>"/>
+    </div>
+
+
+
+    <div class="form-el">
+        <input type="submit"  value="Update Album">
+    </div>
+
+
+  </div>
+
+</form>
