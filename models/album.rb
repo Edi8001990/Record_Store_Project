@@ -34,9 +34,11 @@ end
 
 # I need explanation fot this
 def artist()
-  artist = Artist.find(@artist_id)
-  return artist
+  artist_id = Artist.find(@artist_id)
+  return artist_id
 end
+
+
 
 def self.all()
   sql = "SELECT * FROM albums;"
