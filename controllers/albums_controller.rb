@@ -14,3 +14,16 @@ get '/albums/:id' do
   @album = Album.find(params['id'])
   erb(:show)
 end
+
+
+post '/albums' do
+  Album.new(params).save
+  redirect to '/albums'
+end
+
+
+post '/albums/:id/delete' do
+  album = Album.find(params['id'])
+  album.delete
+  redirect to '/albums'
+end

@@ -3,9 +3,9 @@ require_relative('../models/artist')
 
 
 
-artist1 = Artist.new({'name' => 'Stevie', 'surname' => 'Wonder'})
-artist2 = Artist.new({'name' => 'Michael', 'surname' => 'Jackson'})
-artist3 = Artist.new({'name' => 'Whitney', 'surname' => 'Houston'})
+artist1 = Artist.new({'name' => 'Stevie Wonder'})
+artist2 = Artist.new({'name' => 'Michael Jackson'})
+artist3 = Artist.new({'name' => 'Whitney Houston'})
 artist1.save()
 artist2.save()
 artist3.save()
@@ -39,6 +39,3 @@ album9.save()
 album10.save()
 album11.save()
 album12.save()
-
-
-artist2.find()

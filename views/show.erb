@@ -1,13 +1,8 @@
-<!DOCTYPE html>
-<html lang="en" dir="ltr">
-  <head>
-    <meta charset="utf-8">
-    <title></title>
-  </head>
-  <body>
-    <h3><%= @album.artist.format_name %></h3>
-    <p>Title: <%= @album.album_title %></p>
-    <p>Year of issue: <%= @album.year_of_issue.to_s %></p>
-    <p>Quantity: <%= @album.quantity.to_s %></p>
-  </body>
-</html>
+
+<h3><%= @album.artist.format_name %></h3>
+<p>Title: <%= @album.album_title %></p>
+<p>Year of issue: <%= @album.year_of_issue.to_s %></p>
+<p>Quantity: <%= @album.quantity.to_s %></p>
+<form class="" action="/albums/<%= @album.id %>/delete" method="POST">
+<input type="submit" value="Remove Album">
+</form>
