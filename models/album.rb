@@ -24,7 +24,7 @@ end
 def update()
   sql = "UPDATE albums SET (album_title, quantity, year_of_issue, artist_id) =
   ($1, $2, $3, $4) WHERE id = $5;"
-  values = [@album_title, @quantity, @year_of_issue, @artist_id]
+  values = [@album_title, @quantity, @year_of_issue, @artist_id, @id]
   SqlRunner.run(sql, values)
 end
 

@@ -22,7 +22,7 @@ get '/albums/:id/edit' do
   erb(:edit)
 end
 
-post '/albums/:id/' do
+post '/albums/:id' do
   album = Album.new(params)
   album.update
   redirect to "/albums/#{params['id']}"
@@ -31,6 +31,7 @@ end
 post '/albums' do
   Album.new(params).save
   redirect to '/albums'
+
 end
 
 
