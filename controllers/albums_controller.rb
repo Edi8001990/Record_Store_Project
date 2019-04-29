@@ -7,7 +7,8 @@ also_reload('./models/*')
 
 get '/albums' do
 @all_albums =  Album.all()
-erb(:"albums/index")
+
+erb(:albums)
 end
 
 
