@@ -23,7 +23,14 @@ def save()
   values = [@name]
   result = SqlRunner.run(sql, values)
   id = result.first["id"]
-  @id = id.to_i
+  @id = id
+end
+
+
+def update()
+  sql = "UPDATE artists SET name = $1;"
+  values = [@name]
+  SqlRunner.run(sql, values)
 end
 
 
