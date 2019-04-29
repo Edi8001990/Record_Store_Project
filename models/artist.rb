@@ -28,8 +28,8 @@ end
 
 
 def update()
-  sql = "UPDATE artists SET name = $1;"
-  values = [@name]
+  sql = "UPDATE artists SET name = $1 WHERE id = $2;"
+  values = [@name,@id]
   SqlRunner.run(sql, values)
 end
 
@@ -44,7 +44,7 @@ end
 
 
 def self.all()
-  sql = "SELECT * FROM artists;"
+  sql = "SELECT * FROM artists ORDER BY name;"
   artist_data = SqlRunner.run(sql)
   artists = artist_data.map{|artist| Artist.new(artist)}
   return artists

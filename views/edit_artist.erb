@@ -1,1 +1,17 @@
-<p>Edit Artist</p>
+<p>Edit <span style="color:red;"><%= @artist.name %></span></p>
+
+<form method="POST" action="/artists/<%= @artist.id %>">
+  <div class="form-wrapper">
+
+    <div class="form-el">
+      <label for="album_title">New Artist Name: </label>
+      <input type="text" name="name" id="name" value="<%= @artist.name %>"/>
+    </div>
+
+    <div class="form-el">
+        <input type="submit"  value="Update Artist">
+    </div>
+
+  </div>
+
+</form>

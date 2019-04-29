@@ -24,7 +24,14 @@ post '/artist-new' do
   redirect to '/artists'
 end
 
+
 get '/artists/:id' do
   @artist = Artist.find(params['id'])
   erb(:edit_artist)
+end
+
+post '/artists/:id' do
+  artist = Artist.new(params)
+  artist.update
+  redirect to "/artists"
 end
