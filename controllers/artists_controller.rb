@@ -35,3 +35,10 @@ post '/artists/:id' do
   artist.update
   redirect to "/artists"
 end
+
+
+post '/artists/:id/delete' do
+  artist = Artist.find(params['id'])
+  artist.delete
+  redirect to '/artists'
+end
