@@ -6,27 +6,30 @@ also_reload('./models/*')
 
 
 get '/albums' do
-@all_albums =  Album.all()
+    @all_albums =  Album.all()
+    erb(:'album/albums')
+end
 
-erb(:albums)
+get '/album-new' do
+  erb(:'album/new_album')
 end
 
 
 get '/albums/:id' do
-  @album = Album.find(params['id'])
-  erb(:show)
+    @album = Album.find(params['id'])
+    erb(:'album/show_album')
 end
 
 get '/albums/:id/edit' do
-  @artists = Artist.all
-  @album = Album.find(params['id'])
-  erb(:edit)
+    @artists = Artist.all
+    @album = Album.find(params['id'])
+    erb(:'album/edit_album')
 end
 
 post '/albums/:id' do
-  album = Album.new(params)
-  album.update
-  redirect to "/albums/#{params['id']}"
+    album = Album.new(params)
+    album.update
+    redirect to "/albums/#{params['id']}"
 end
 
 post '/albums' do

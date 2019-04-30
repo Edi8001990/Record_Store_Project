@@ -12,11 +12,11 @@ end
 
 get '/artists' do
   @artists = Artist.all()
-  erb(:artists)
+  erb(:'artist/artists')
 end
 
 get '/artist-new' do
-  erb(:artist_new)
+  erb(:'artist/artist_new')
 end
 
 post '/artist-new' do
@@ -27,7 +27,7 @@ end
 
 get '/artists/:id' do
   @artist = Artist.find(params['id'])
-  erb(:edit_artist)
+  erb(:'artist/edit_artist')
 end
 
 post '/artists/:id' do
