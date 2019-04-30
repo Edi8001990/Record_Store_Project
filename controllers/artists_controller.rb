@@ -9,6 +9,7 @@ also_reload('./models/*')
 
 get '/artists' do
   @artists = Artist.all()
+  
   erb(:'artist/artists')
 end
 

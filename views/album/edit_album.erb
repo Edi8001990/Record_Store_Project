@@ -1,7 +1,7 @@
-<p>Edit <b><%= @album.album_title %></b> album from <span style="color:red;"><%= @album.artist.name %></span> </p>
+<p class="info-specs">Edit <b><%= @album.album_title %></b> album from <span style="color:#dd5252;"><%= @album.artist.name %></span> </p>
 
-<form method="POST" action="/albums/<%= @album.id %>">
-  <div class="form-wrapper">
+<form class="form" method="POST" action="/albums/<%= @album.id %>">
+
 
 
       <div class="form-el">
@@ -21,8 +21,8 @@
 
 
     <div class="form-el">
-        <label for="name">Artist: </label>
-        <select name="artist_id" id="artist_select" selected="<%= @album.artist_id %>">
+        <label for="artist_id">Artist: </label>
+        <select name="artist_id" id="artist_id" selected="<%= @album.artist_id%>">
           <% @artists.each do |artist| %>
             <% if artist.id == @album.artist_id %>
             <option value=<%= artist.id %> selected><%= artist.name %></option>
@@ -41,6 +41,6 @@
     </div>
 
 
-  </div>
+
 
 </form>

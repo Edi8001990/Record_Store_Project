@@ -39,7 +39,9 @@ def self.find(id)
   return album
 end
 
-# I need explanation fot this
+
+
+
 def artist()
   artist = Artist.find(@artist_id)
   return artist
