@@ -11,6 +11,7 @@ get '/albums' do
 end
 
 get '/album-new' do
+  @artists = Artist.all()
   erb(:'album/new_album')
 end
 

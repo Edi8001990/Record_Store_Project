@@ -1,9 +1,30 @@
+<h2 class="header">
+        <i class="fa fa-headphones" aria-hidden="true"></i>
+        Album Info
+        <i class="fa fa-headphones" aria-hidden="true"></i>
+</h2>
 
-<h3><%= @album.artist.name %></h3>
-<p>Title: <%= @album.album_title %></p>
-<p>Year of issue: <%= @album.year_of_issue.to_s %></p>
-<p>Quantity: <%= @album.quantity.to_s %></p>
-<a href="/albums/<%= @album.id %>/edit">Edit</a>
-<form class="" action="/albums/<%= @album.id %>/delete" method="POST">
-<input type="submit" value="Remove Album">
-</form>
+
+<div class="albums-list-block">
+  <table>
+        <tr>
+          <th colspan="5"><%= @album.album_title %></th>
+        </tr>
+                <tr>
+                  <th>Artist</th>
+                  <th>Year of issue</th>
+                  <th>Quantity</th>
+                  <th colspan="2">Changes</th>
+                </tr>
+
+      <tr>
+        <td><%= @album.artist.name %></td>
+        <td><%= @album.year_of_issue.to_s %></td>
+        <td><%= @album.quantity.to_s %></td>
+        <td><span class="table-link"><a href="/albums/<%= @album.id %>/edit">Edit</a></span></td>
+        <td><form class="" action="/albums/<%= @album.id %>/delete" method="POST">
+          <input class="input-button" type="submit" value="Remove Album">
+        </form></td>
+      </tr>
+    </table>
+</div>

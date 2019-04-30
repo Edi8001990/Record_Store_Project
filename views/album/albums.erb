@@ -1,12 +1,28 @@
-<h2>Albums</h2>
-<div>
+<h2 class="header"><i class="fa fa-headphones" aria-hidden="true"></i> Albums List <i class="fa fa-headphones" aria-hidden="true"></i></h2>
+
 
 <% @all_albums.each do |album| %>
-<p><%= album.artist.name %></p>
-<p>Title: <%= album.album_title %></p>
-<p>Year of issue: <%= album.year_of_issue.to_s %></p>
-<p>Quantity: <%= album.quantity.to_s %></p>
-<p style="color:blue"> <a href="/albums/<%= album.id %>">Settings</a></p>
-<br>
-<% end %>
+<div class="albums-list-block">
+
+
+<table>
+          <tr>
+            <th colspan="4"><%= album.album_title %></th>
+          </tr>
+      <tr>
+        <th>Artist</th>
+        <th>Year of issue</th>
+        <th>Quantity</th>
+        <th>Changes</th>
+      </tr>
+
+      <tr>
+        <td><%= album.artist.name %></td>
+        <td><%= album.year_of_issue.to_s %></td>
+        <td><%= album.quantity.to_s %></td>
+        <td><span class="table-link"><a href="/albums/<%= album.id %>">Settings</a></span></td>
+      </tr>
+</table>
 </div>
+
+<% end %>

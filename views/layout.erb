@@ -2,18 +2,26 @@
 <html lang="en" dir="ltr">
   <head>
     <meta charset="utf-8">
-    <title></title>
+    <title>Record Store</title>
+    <link rel="stylesheet" type="text/css" href="/styles/style.css">
+    <link href="https://fonts.googleapis.com/css?family=Montserrat:600" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Raleway" rel="stylesheet">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css" integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
   </head>
   <body>
-    <nav>
-      <li class="menu-item"><a href="/">Home</a></li>
-      <li class="menu-item"><a href="/artists">Artists</a></li>
-      <li class="menu-item"><a href="/artist-new">New Artist</a></li>
-      <li class="menu-item"><a href="/albums">Albums</a></li>
-      <li class="menu-item"><a href="/album-new">New album</a></li>
 
+    <h1 class="header"><i class="fa fa-music" aria-hidden="true"></i> Super Awesome Record Store</h1>
+    <nav class="main-nav">
+      <ul>
+      <li><a href="/">Home</a></li>
+      <li><a href="/artists">Artists</a></li>
+      <li><a href="/artist-new">New Artist</a></li>
+      <li><a href="/albums">Albums</a></li>
+      <li><a href="/album-new">New album</a></li>
+      </ul>
     </nav>
-    <h1>Records Store</h1>
+
     <%= yield %>
   </body>
 </html>

@@ -5,15 +5,14 @@ require_relative('../models/artist')
 also_reload('./models/*')
 
 
-get '/new' do
-  @artists = Artist.all()
-  erb(:new)
-end
+
 
 get '/artists' do
   @artists = Artist.all()
   erb(:'artist/artists')
 end
+
+
 
 get '/artist-new' do
   erb(:'artist/artist_new')
