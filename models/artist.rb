@@ -38,7 +38,7 @@ end
 def albums
   sql = "SELECT * FROM albums WHERE artist_id = $1;"
   values = [@id]
-  SqlRunner.run(sql, values)
+  album_data = SqlRunner.run(sql, values)
    albums = album_data.map{|album| Album.new(album)}
    return albums
 end

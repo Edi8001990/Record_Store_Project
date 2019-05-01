@@ -6,17 +6,17 @@
 
       <div class="form-el">
         <label for="album_title">Album Title: </label>
-        <input type="text" name="album_title" id="album_title" value="<%= @album.album_title %>"/>
+        <input type="text" name="album_title" id="album_title" required value="<%= @album.album_title %>"/>
       </div>
 
     <div class="form-el">
         <label for="year_of_issue">Year of issue: </label>
-        <input type="number" name="year_of_issue" id="year_of_issue" value="<%= @album.year_of_issue %>"/>
+        <input type="number" name="year_of_issue" id="year_of_issue" required value="<%= @album.year_of_issue %>"/>
     </div>
 
     <div class="form-el">
         <label for="quantity">Quantity: </label>
-        <input type="number" name="quantity" id="quantity" value="<%= @album.quantity %>"/>
+        <input type="number" name="quantity" id="quantity" required value="<%= @album.quantity %>"/>
     </div>
 
 

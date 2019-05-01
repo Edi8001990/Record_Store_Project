@@ -103,7 +103,7 @@ td,th{
   color:#4985e5;
 }
 
-.albums-list-block{
+.albums-list-block, .artists-list-block{
 margin-top: 35px;
   margin-bottom: 70px;
 }
@@ -130,6 +130,11 @@ margin-top: 35px;
   font-size:15px;
   font-family: 'Raleway', sans-serif;
   padding: 10px 0px 10px 0px;
+
+}
+
+input:-webkit-autofill {
+    background-color: white !important;
 }
 
 .form-el{
@@ -165,4 +170,19 @@ label{
 .info-specs{
   font-family: 'Raleway', sans-serif;
   text-align: center;
+}
+
+
+
+.artists-links a{
+  text-decoration:none;
+  color: #4985e5;
+}
+
+
+.remove-artist{
+  padding-top:10px;
+  text-align:center;
+  font-family: 'Raleway', sans-serif;
+  font-size:20px;
 }

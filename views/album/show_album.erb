@@ -22,7 +22,7 @@
         <td><%= @album.year_of_issue.to_s %></td>
         <td><%= @album.quantity.to_s %></td>
         <td><span class="table-link"><a href="/albums/<%= @album.id %>/edit">Edit</a></span></td>
-        <td><form class="" action="/albums/<%= @album.id %>/delete" method="POST">
+        <td><form action="/albums/<%= @album.id %>/delete" method="POST">
           <input class="input-button" type="submit" value="Remove Album">
         </form></td>
       </tr>

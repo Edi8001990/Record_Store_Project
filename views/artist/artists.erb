@@ -1,15 +1,23 @@
-<h2>Artists</h2>
+<h2 class="header">Artists Overview</h2>
 
-<div class="">
+
 <% @artists.each do |artist|  %>
-<p><%= artist.name %></p>
+<div class="artists-list-block">
+<table>
+    <tr>
+      <th colspan="2" class="artists-links"><a href="/artists/<%= artist.id %>"><%= artist.name %></a></th>
+    </tr>
 
+<% artist.albums.each do |album| %>
+<tr>
+  <td><%= album.album_title %></td>
+  <td class="artists-links"><a href="/albums/<%= album.id %>">Album Info</a></td>
+</tr>
 
-<p><a href="/artists/<%= artist.id %>">Settings</a></p>
-<br>
 
 <% end %>
 
 
-
+</table>
 </div>
+<% end %>
