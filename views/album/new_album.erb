@@ -22,7 +22,8 @@
 
           <div class="form-el">
             <label for="artist_id">Artist name:</label>
-                  <select name="artist_id" id="artist_id">
+                  <select required name="artist_id" id="artist_id">
+                    <option selected disabled></option>
                     <% @artists.each do |artist| %>
                     <option value=<%= artist.id %>><%= artist.name %></option>
                     <% end %>

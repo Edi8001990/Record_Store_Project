@@ -177,12 +177,19 @@ label{
 .artists-links a{
   text-decoration:none;
   color: #4985e5;
+
+
+}
+
+.artist-tab {
+  text-decoration:none;
 }
 
 
 .remove-artist{
   padding-top:10px;
   text-align:center;
-  font-family: 'Raleway', sans-serif;
+  font-family: 'Raleway', sans-serif ;
   font-size:20px;
+
 }

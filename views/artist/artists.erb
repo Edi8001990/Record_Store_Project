@@ -5,11 +5,13 @@
 <div class="artists-list-block">
 <table>
     <tr>
-      <th colspan="2" class="artists-links"><a href="/artists/<%= artist.id %>"><%= artist.name %></a></th>
+      <th colspan="2" class="artist-tab"><%= artist.name %></th>
+      <th class="artists-links"><a href="/artists/<%= artist.id %>">Edit Artist</a></th>
     </tr>
 
-<% artist.albums.each do |album| %>
+<% artist.albums.each_with_index do |album, index| %>
 <tr>
+  <td><%= (index + 1).to_s %></td>
   <td><%= album.album_title %></td>
   <td class="artists-links"><a href="/albums/<%= album.id %>">Album Info</a></td>
 </tr>
